@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp QR Code Generator</title>
+    <!-- Include qrcode.js library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        #qrcode {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Scan to Chat me on WhatsApp</h2>
+    <!-- Div where the QR code will be displayed -->
+    <div id="qrcode"></div>
+
+    <script>
+        // WhatsApp link with the phone number
+        const whatsappUrl = "https://wa.me/2349038360889";
+
+        // Generate QR code
+        new QRCode(document.getElementById("qrcode"), {
+            text: whatsappUrl,
+            width: 200,  // Width of the QR code
+            height: 200, // Height of the QR code
+            colorDark: "#000000", // QR code color
+            colorLight: "#ffffff" // Background color
+        });
+    </script>
+</body>
+</html>
